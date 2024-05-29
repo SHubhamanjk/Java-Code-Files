@@ -112,15 +112,15 @@ public class day8 {
 
     }
     public static void main(String args[]){
-    //     sum(20,25); // Arguements or Actural parameter
-    //     productof(45, 3);
-    //     find_factorial(5);
-    //     find_binocoeff(5,3);
+        sum(20,25); // Arguements or Actural parameter
+        productof(45, 3);
+        find_factorial(5);
+        find_binocoeff(5,3);
 
-        // System.out.println(find_sum(8,9));
-        // System.out.println(find_sum(8,9,5));
-        // System.out.println(find_sum(4.8f,9.6f));
-        // System.out.println(is_prime(69));
+        System.out.println(find_sum(8,9));
+        System.out.println(find_sum(8,9,5));
+        System.out.println(find_sum(4.8f,9.6f));
+        System.out.println(is_prime(69));
         System.out.println(bin_to_dec(1111));
     }
 }
