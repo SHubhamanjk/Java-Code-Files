@@ -12,6 +12,8 @@
 
 // function overloading :-  when diffrent functions which has same name but diffrent parameters
 
+
+import java.util.*;
 public class day8 {
     public static void PrintHelloworld(){
         System.out.println("Hellow World !!!! ");
@@ -111,6 +113,121 @@ public class day8 {
 
 
     }
+
+    public static String dec_to_bin(int num){
+        int temp=num;
+        int r=0;
+        String bin="";
+        while(temp>0){
+            r=temp%2;
+            bin=r+bin;
+            temp/=2;
+
+        }
+        return bin;
+
+
+    }
+
+    public static float avg_3(float num1,float num2,float num3){
+        float sum = num1+num2+num3;
+        float avg = sum/3;
+        return avg;
+    }
+
+    public static boolean is_even(int num){
+        if(num%2==0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public static boolean num_is_palindrone(int num){
+        int temp=num;
+        int r=0;
+        int rev=0;
+        while(temp>0){
+            r=temp%10;
+            rev=rev*10+r;
+            temp/=10;
+        }
+        if (num==rev){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public static boolean str_is_palindrone(String input){
+        // String temp=input;
+        int n=input.length();
+        String rev="";
+        for(int i=n-1;i>=0;i--){
+            rev+=input.charAt(i);
+
+        }
+        if(rev.toLowerCase().equals(input.toLowerCase())){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public static void iss_palindrone(){
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.print("What you want to check (number or letter) :- ");
+        String cfr1=sc.nextLine();
+        if (cfr1.toLowerCase().equals("number")){
+            System.out.print("Enter the Number :- ");
+            int num=sc.nextInt();
+            if(num_is_palindrone(num)==true){
+                System.out.println("Yes !!! Number is Palindrone");
+            }
+            else{
+                System.out.println("No !!!! Not a Palidrone");
+            }
+            sc.close();
+        }    
+        else if (cfr1.toLowerCase().equals("letter")){
+            Scanner sc2 = new Scanner(System.in);
+            System.out.print("Enter the Letter :- ");
+            String input=sc2.nextLine();
+            if(str_is_palindrone(input)==true){
+                System.out.println("Yes !!! Letter is Palindrone");
+            }
+            else{
+                System.out.println("No !!!! Not a Palidrone");
+            }
+            sc2.close();
+
+        }
+        else{
+            System.out.println("Please Enter a Valid Input !!! ");
+        }    
+        }  
+
+        public static int sod(int num){
+            int r;
+            int sum=0;
+            while(num>0){
+                r=num%10;
+                sum+=r;
+                num/=10;
+
+            }
+            return sum;
+        }
+
+
+
+
+
+    
     public static void main(String args[]){
         sum(20,25); // Arguements or Actural parameter
         productof(45, 3);
@@ -122,5 +239,21 @@ public class day8 {
         System.out.println(find_sum(4.8f,9.6f));
         System.out.println(is_prime(69));
         System.out.println(bin_to_dec(1111));
+        System.out.println(dec_to_bin(8));
+        System.out.println(avg_3(12, 12,12));
+        System.out.println(is_even(48));
+        System.out.println(str_is_palindrone("Jahaj"));
+        iss_palindrone();
+        System.out.println(sod(458));
+        System.out.println(Math.pow(5,3));
+        System.out.println(Math.sqrt(49));
+        System.out.println(Math.min(78, 45));
+        System.out.println(Math.max(48,96));
+        System.out.println(Math.abs(-89));
+
+      
     }
-}
+    }    
+
+
+
