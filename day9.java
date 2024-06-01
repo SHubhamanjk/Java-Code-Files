@@ -135,13 +135,13 @@ public class day9{
     }
     public static void main(String args[]){
 
-    // hollow_pattern(10, 5);
-    // inverted_halfpyramid(10);
-    // floyds_triange(10);
-    // zero_one_triange(10);
-    // butterfly(5);
-    // solid_rombhos(10);
-    // hollow_rombhus(5);
+    hollow_pattern(10, 5);
+    inverted_halfpyramid(10);
+    floyds_triange(10);
+    zero_one_triange(10);
+    butterfly(5);
+    solid_rombhos(10);
+    hollow_rombhus(5);
 
     }
 }
