@@ -135,19 +135,19 @@ public class day9{
     }
     public static void main(String args[]){
 
-    hollow_pattern(10, 5);
-    inverted_halfpyramid(10);
-    floyds_triange(10);
-    zero_one_triange(10);
-    butterfly(5);
-    solid_rombhos(10);
-    hollow_rombhus(5);
+    // hollow_pattern(10, 5);
+    // inverted_halfpyramid(10);
+    // floyds_triange(10);
+    // zero_one_triange(10);
+    // butterfly(5);
+    // solid_rombhos(10);
+    // hollow_rombhus(5);
 
     }
 }
 
 
-// WAP to print Hollow Square Pattern
+// // WAP to print Hollow Square Pattern
 
 
 import java.util.*;
@@ -178,7 +178,7 @@ public class day9{
     }
 
 
-// WAP to print inverted and half rotated pyramid
+// // WAP to print inverted and half rotated pyramid
 
 import java.util.*;
 public class day9{
@@ -203,7 +203,7 @@ public class day9{
     }
 }
 
-// WAP to print floyd's pattern
+// // WAP to print floyd's pattern
 
 import java.util.*;
 public class day9{
@@ -226,7 +226,7 @@ public class day9{
     }
 }
 
-// WAP to print 0 1 triangle
+// // WAP to print 0 1 triangle
 
 import java.util.*;
 
@@ -261,7 +261,7 @@ public class day9{
 }
 
 
-// WAP to print Butterfly pattern
+// // WAP to print Butterfly pattern
 
 
 import java.util.*;
@@ -301,7 +301,7 @@ public class day9{
 }
 
 
-// WAP to print solid rombhus patter
+// // WAP to print solid rombhus patter
 
 import java.util.*;
 public class day9{
@@ -323,3 +323,86 @@ public class day9{
 
     }
 }
+
+
+// WAP to print hollow rombhus pattern
+
+import java.util.*;
+public class day9{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the Number Of Lines :- ");
+        int n=sc.nextInt();
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=n-i;j++){
+                System.out.print("   ");
+            }
+            for(int k=1;k<=n;k++){
+                if(i==1||i==n||k==1||k==n){
+                    System.out.print(" * ");
+
+
+                }
+                else{
+                    System.out.print("   ");
+                }
+
+
+            }
+            System.out.println();
+            
+        }
+        sc.close();
+
+    }
+}
+
+
+// WAP to print diamond pattern
+
+import java.util.*;
+public class day9{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the Value of n :- ");
+        int n = sc.nextInt();
+        // int temp=1;
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=n-i;j++){
+                System.out.print("   ");
+            }
+            for(int k=1;k<=((2*i)-1);k++){
+                System.out.print(" * ");
+                // temp+=2;
+                // if(temp>=(2*n-1)){
+                //     break;
+                // }
+            }
+            System.out.println();
+        }
+        for(int l=n;l>=1;l--){
+            for(int m=1;m<=n-l;m++){
+                System.out.print("   ");
+            }
+            for(int o=1;o<=((2*l)-1);o++){
+                System.out.print(" * ");
+                // temp+=2;
+                // if(temp>=(2*n)-1){
+                //     break;
+                // }
+            }
+            System.out.println();
+
+        }
+        sc.close();
+
+    }
+}
+
+
+
+
+
+
+
+
