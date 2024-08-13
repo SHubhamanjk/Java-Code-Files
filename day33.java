@@ -14,20 +14,40 @@
 import java.util.*;
 public class day33 {
 
-    // public static int most_water(ArrayList<Integer> list){
-    //     int res = 0;
-    //     for(int i=0;i<list.size();i++){
-    //         for(int j=i+1;j<list.size();j++){
-    //             int height = Math.min(list.get(i), list.get(j));
-    //             int width = j-i;
-    //             int temp = height*width;
-    //             if(temp>res){
-    //                 res=temp;
-    //             }
-    //         }
-    //     }
-    //     return res;
-    // }
+   // Function to find the container that can hold the most water
+// public static int mostWater(ArrayList<Integer> heights) {
+    /*
+    Approach:
+    To find the container that can hold the most water, we evaluate multiple pairs of lines (heights) 
+    and calculate the water quantity for each pair. The water quantity is determined by the height 
+    of the shorter line and the distance between the lines (width). We compare the calculated quantities 
+    and update the maximum quantity accordingly. The final result is the maximum amount of water that 
+    can be contained between any two lines.
+    */
+    
+//     int maxWater = 0;  // Variable to store the maximum water found
+
+//     for (int i = 0; i < heights.size(); i++) {
+//         for (int j = i + 1; j < heights.size(); j++) {
+//             // Calculate the height of the water using the shorter of the two lines
+//             int height = Math.min(heights.get(i), heights.get(j));
+            
+//             // Calculate the width (distance between the two lines)
+//             int width = j - i;
+            
+//             // Calculate the water quantity for the current pair of lines
+//             int currentWater = height * width;
+            
+//             // Update the maximum water if the current quantity is greater
+//             if (currentWater > maxWater) {
+//                 maxWater = currentWater;
+//             }
+//         }
+//     }
+    
+//     return maxWater;  // Return the maximum water found
+// }
+
 
     public static int most_water(ArrayList<Integer> list){
         int res  = 0;
