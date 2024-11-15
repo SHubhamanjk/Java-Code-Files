@@ -229,6 +229,7 @@ public class revision{
         System.out.println("Total Number of Pairs "+count);
         System.out.println("Maximum Sum Of Sub Array is "+max_sum);
         System.out.println("Minimum Sum Of Sub Array is "+min_sum);
+        System.out.println("Total Number of Pairs "+count);
     }
 
 
@@ -239,6 +240,7 @@ public class revision{
         // print_half_pyramid_pattern(5);
         int arr[]={4,2,6,8,10};
         // bubble_sort(arr);
+        
         // binary_search(arr,12);
         // print_sub_array(arr);
         print_max_min_sum_sub_array(arr);
