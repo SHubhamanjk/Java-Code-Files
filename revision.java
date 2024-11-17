@@ -229,7 +229,76 @@ public class revision{
         System.out.println("Total Number of Pairs "+count);
         System.out.println("Maximum Sum Of Sub Array is "+max_sum);
         System.out.println("Minimum Sum Of Sub Array is "+min_sum);
-        System.out.println("Total Number of Pairs "+count);
+    }
+
+    public static int[] selection_short(int arr[]){
+        for(int i=0;i<arr.length-1;i++){
+            int min=arr[i];
+            int temp;
+            for(int j=i+1;j<arr.length;j++){
+                if(min>arr[j]){
+                    temp=arr[j];
+                    arr[j]=min;
+                    min=temp;
+                }
+            }
+            arr[i]=min;
+        }
+        return arr;
+    }
+    
+    public static int[] insertion_short(int arr[]){
+        for(int i=1;i<arr.length;i++){
+            for(int j=0;j<i;j++){
+                int temp;
+                if(arr[i]<arr[j]){
+                    temp=arr[i];
+                    arr[i]=arr[j];
+                    arr[j]=temp;
+                }
+            }
+        }
+        return arr;
+    }
+
+    public static int[] count_short(int arr[]){
+        int max=Arrays.stream(arr).max().getAsInt();
+        int count_arr[] = new int[max+1];
+        for(int i=0;i<arr.length;i++){
+            count_arr[arr[i]]++;
+        }
+        int j=0;
+        for(int i=0;i<count_arr.length;i++){
+            while(count_arr[i]!=0){
+                arr[j]=i;
+                j++;
+                count_arr[i]--;
+            }
+        }
+        return arr;
+
+    }
+
+    public static int count_7(int arr[][]){
+        int count=0;
+        for(int i=0;i<arr.length;i++){
+            for(int j=0;j<arr[0].length;j++){
+                if(arr[i][j]==7){
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+
+    public static int[][] transpose(int arr[][]){
+        int new_arr[][]= new int[arr[0].length][arr.length];
+        for(int i=0;i<arr.length;i++){
+            for(int j=0;j<arr[0].length;j++){
+                new_arr[j][i]=arr[i][j];
+            }
+        }
+        return new_arr;
     }
 
 
@@ -238,12 +307,27 @@ public class revision{
         // print_first_prime();
         // print_inverted_start_pattern(5);
         // print_half_pyramid_pattern(5);
-        int arr[]={4,2,6,8,10};
+        // int arr[]={13,18,4,5,2,12,19};
+        // int arr[]={1,4,1,3,2,4,3,7};
         // bubble_sort(arr);
-        
         // binary_search(arr,12);
         // print_sub_array(arr);
-        print_max_min_sum_sub_array(arr);
-    
+        // print_max_min_sum_sub_array(arr);
+        // bubble_sort(arr);
+        // selection_short(arr);
+        // insertion_short(arr);
+        // count_short(arr);
+        // for(int i=0;i<arr.length;i++){
+        //     System.out.print(arr[i]+" ");
+        // }
+        int arr[][]={{4,7,8},{8,8,7}};
+        // System.out.println(count_7(new int[][]{{4,7,8},{8,8,7},{9,6,12}}));
+        int new_arr[][]=transpose(arr);
+        for(int i=0;i<new_arr.length;i++){
+            for(int j=0;j<new_arr[i].length;j++){
+                System.out.print(new_arr[i][j]+" ");
+            }
+            System.out.println();
+        }
     }
 }
