@@ -301,6 +301,42 @@ public class revision{
         return new_arr;
     }
 
+    public static boolean check_palindrone(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Your String :- ");
+        String s = new String(sc.nextLine());
+        sc.close();
+        int n=(s.length()-1)/2;
+        for(int i=0;i<n;i++){
+            if(s.charAt(i)!=s.charAt(s.length()-1-i)){
+                return false;
+            }
+        
+        }
+        return true;
+    }
+
+    public static int sortest_path(String s){
+        int distance_x=0;
+        int distance_y=0;
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)=='N'){
+                distance_y++;
+            }
+            else if(s.charAt(i)=='S'){
+                distance_y--;
+            }
+            else if(s.charAt(i)=='E'){
+                distance_x++;
+            }
+            else if(s.charAt(i)=='W'){
+                distance_x--;
+            }
+        }
+        int res = (int) Math.sqrt((distance_x * distance_x) + (distance_y * distance_y));
+        return res;
+    }
+
 
     public static void main(String agrs[]){
         // calculater();
@@ -320,14 +356,54 @@ public class revision{
         // for(int i=0;i<arr.length;i++){
         //     System.out.print(arr[i]+" ");
         // }
-        int arr[][]={{4,7,8},{8,8,7}};
-        // System.out.println(count_7(new int[][]{{4,7,8},{8,8,7},{9,6,12}}));
-        int new_arr[][]=transpose(arr);
-        for(int i=0;i<new_arr.length;i++){
-            for(int j=0;j<new_arr[i].length;j++){
-                System.out.print(new_arr[i][j]+" ");
-            }
-            System.out.println();
-        }
+        // int arr[][]={{4,7,8},{8,8,7}};
+        // // System.out.println(count_7(new int[][]{{4,7,8},{8,8,7},{9,6,12}}));
+        // int new_arr[][]=transpose(arr);
+        // for(int i=0;i<new_arr.length;i++){
+        //     for(int j=0;j<new_arr[i].length;j++){
+        //         System.out.print(new_arr[i][j]+" ");
+        //     }
+        //     System.out.println();
+        // }
+        // System.out.println(sortest_path("WNEENESENN"));
+        // StringBuilder s = new StringBuilder("Hellow");
+        // s.append(" World!!");
+        // System.out.println(s);
+        Student s1 = new Student();
+        s1.name="shubham";
+        s1.roll_no=5;
+        s1.class_study=12;
+        s1.school_name="HLHS BS";
+        s1.PrintName();
+
+        Student s2 = new Student("Ashish", 6, 12, "HLHS BS");
+        s2.PrintName();
+
+
+
     }
 }
+
+class Student{
+    String name;
+    int roll_no;
+    int class_study;
+    String school_name;
+
+
+    Student(String name , int roll_no , int class_study , String school_name){
+        this.name=name;
+        this.roll_no=roll_no;
+        this.class_study=class_study;
+        this.school_name=school_name;
+    }
+
+    Student(){
+        ;
+    }
+    public void PrintName(){
+        System.out.println(this.name);
+    }
+
+}
+
