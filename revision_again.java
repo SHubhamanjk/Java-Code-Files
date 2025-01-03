@@ -170,67 +170,132 @@ public class revision_again{
 
     public static void main(String args[]){
 
-        System.out.println("\nTest Case 5 - Prime Check (Prime Number):");
-        System.out.println(check_prime(7));  
+        // System.out.println("\nTest Case 5 - Prime Check (Prime Number):");
+        // System.out.println(check_prime(7));  
 
-        System.out.println("\nTest Case 6 - Prime Check (Non-prime Number):");
-        System.out.println(check_prime(10));  
+        // System.out.println("\nTest Case 6 - Prime Check (Non-prime Number):");
+        // System.out.println(check_prime(10));  
 
-        System.out.println("\nTest Case 7 - Factorial:");
-        System.out.println(find_factorial(5));  
+        // System.out.println("\nTest Case 7 - Factorial:");
+        // System.out.println(find_factorial(5));  
 
-        System.out.println("\nTest Case 8 - Palindrome Check (Palindrome String):");
-        System.out.println(check_palindrom("madam"));  
+        // System.out.println("\nTest Case 8 - Palindrome Check (Palindrome String):");
+        // System.out.println(check_palindrom("madam"));  
 
-        System.out.println("\nTest Case 9 - Palindrome Check (Non-palindrome String):");
-        System.out.println(check_palindrom("hello"));  
+        // System.out.println("\nTest Case 9 - Palindrome Check (Non-palindrome String):");
+        // System.out.println(check_palindrom("hello"));  
 
-        System.out.println("\nTest Case 10 - Matrix Transpose:");
-        int[][] matrix = {
-            {1, 2, 3},
-            {4, 5, 6},
-            {7, 8, 9}
-        };
-        int[][] transposedMatrix = matrix_transpose(matrix);
-        for (int i = 0; i < transposedMatrix.length; i++) {
-            for (int j = 0; j < transposedMatrix[i].length; j++) {
-                System.out.print(transposedMatrix[i][j] + " ");
-            }
-            System.out.println();
-        }  
+        // System.out.println("\nTest Case 10 - Matrix Transpose:");
+        // int[][] matrix = {
+        //     {1, 2, 3},
+        //     {4, 5, 6},
+        //     {7, 8, 9}
+        // };
+        // int[][] transposedMatrix = matrix_transpose(matrix);
+        // for (int i = 0; i < transposedMatrix.length; i++) {
+        //     for (int j = 0; j < transposedMatrix[i].length; j++) {
+        //         System.out.print(transposedMatrix[i][j] + " ");
+        //     }
+        //     System.out.println();
+        // }  
 
-        System.out.println("\nTest Case 11 - Linear Search (Element Found):");
-        int[] arr1 = {10, 20, 30, 40, 50};
-        System.out.println(linear_search(arr1, 30));  
+        // System.out.println("\nTest Case 11 - Linear Search (Element Found):");
+        // int[] arr1 = {10, 20, 30, 40, 50};
+        // System.out.println(linear_search(arr1, 30));  
 
-        System.out.println("\nTest Case 12 - Linear Search (Element Not Found):");
-        System.out.println(linear_search(arr1, 60));  
+        // System.out.println("\nTest Case 12 - Linear Search (Element Not Found):");
+        // System.out.println(linear_search(arr1, 60));  
 
-        System.out.println("\nTest Case 13 - Binary Search (Element Found):");
-        int[] arr2 = {10, 20, 30, 40, 50};
-        System.out.println(binary_search(arr2, 30));  
+        // System.out.println("\nTest Case 13 - Binary Search (Element Found):");
+        // int[] arr2 = {10, 20, 30, 40, 50};
+        // System.out.println(binary_search(arr2, 30));  
 
-        System.out.println("\nTest Case 14 - Binary Search (Element Not Found):");
-        System.out.println(binary_search(arr2, 60));  
+        // System.out.println("\nTest Case 14 - Binary Search (Element Not Found):");
+        // System.out.println(binary_search(arr2, 60));  
 
-        System.out.println("\nTest Case 15 - Bubble Sort:");
-        int[] arr3 = {5, 2, 9, 1, 5, 6};
-        System.out.println(Arrays.toString(bubble_sort(arr3)));  
+        // System.out.println("\nTest Case 15 - Bubble Sort:");
+        // int[] arr3 = {5, 2, 9, 1, 5, 6};
+        // System.out.println(Arrays.toString(bubble_sort(arr3)));  
 
-        System.out.println("\nTest Case 16 - Insertion Sort:");
-        int[] arr4 = {5, 2, 9, 1, 5, 6};
-        System.out.println(Arrays.toString(insertion_sort(arr4))); 
+        // System.out.println("\nTest Case 16 - Insertion Sort:");
+        // int[] arr4 = {5, 2, 9, 1, 5, 6};
+        // System.out.println(Arrays.toString(insertion_sort(arr4))); 
 
-        System.out.println("\nTest Case 17 - Selection Sort:");
-        int[] arr5 = {5, 2, 9, 1, 5, 6};
-        System.out.println(Arrays.toString(selection_sort(arr5)));  
+        // System.out.println("\nTest Case 17 - Selection Sort:");
+        // int[] arr5 = {5, 2, 9, 1, 5, 6};
+        // System.out.println(Arrays.toString(selection_sort(arr5)));  
+        LinkedLis list = new LinkedLis();
+
+      
+        System.out.println("Adding elements at the beginning:");
+        list.add_first(10);
+        list.add_first(20);
+        list.add_first(30);
+        list.print_LL(); 
+
+    
+        System.out.println("\nAdding elements at the end:");
+        list.add_last(40);
+        list.add_last(50);
+        list.print_LL(); 
+
+        
+        System.out.println("\nAdding element at index 2:");
+        list.add(25, 2);
+        list.print_LL(); 
+
+        
+        System.out.println("\nSize of Linked List: " + list.size()); 
+
+        
+        System.out.println("\nRemoving the first element:");
+        list.remove_first();
+        list.print_LL(); 
+
+        
+        System.out.println("\nRemoving the last element:");
+        list.remove_last();
+        list.print_LL(); 
+
+      
+        System.out.println("\nRemoving element at index 1:");
+        list.remove(1);
+        list.print_LL(); 
+
+     
+        System.out.println("\nSearching for element 10:");
+        int index = list.search(10);
+        if (index != -1) {
+            System.out.println("Element 10 found at index: " + index); 
+        } else {
+            System.out.println("Element 10 not found");
+        }
+
+        
+        System.out.println("\nSearching for element 100:");
+        index = list.search(100);
+        if (index != -1) {
+            System.out.println("Element 100 found at index: " + index);
+        } else {
+            System.out.println("Element 100 not found"); 
+        }
+
+       
+        System.out.println("\nClearing the list and testing removal:");
+        list.remove_first();
+        list.remove_first();
+        list.remove_first();
+        list.print_LL(); 
+
+        
+        list.remove_first(); 
     }
 
   
 
 
 
-    class Student{
+    public class Student{
         String name;
         int id;
         int classs;
@@ -292,6 +357,150 @@ public class revision_again{
     public class CS_Student extends Student{
         String language;
         int no_of_projects_done;
+
+
+    }
+
+
+    public static class LinkedLis{
+        public class Node{
+            int data;
+            Node next;
+        
+
+        public Node(int data){
+            this.data=data;
+            this.next=null;
+        }
+        }
+    public static Node head;
+    public static Node tail;
+
+
+    public void add_first(int data){
+        Node newNode=new Node(data);
+        if(head==null){
+            head=tail=newNode;
+            return;
+        }
+        else{
+            newNode.next=head;
+            head=newNode;
+        }
+    }
+
+    public void add_last(int data){
+        Node newNode=new Node(data);
+        if(head==null){
+            head=tail=newNode;
+            return;
+        }
+        else{
+            tail.next=newNode;
+            tail=newNode;
+        }
+
+    }
+
+    public void print_LL(){
+        if(head==null){
+            System.out.println("LL Is Empty");
+            return;
+        }
+        Node curr=head;
+        while(curr!=null){
+            System.out.print(curr.data+"-->");
+            curr=curr.next;
+        }
+        System.out.println("NUll");
+    }
+
+
+    public void add(int data,int idx){
+        if(idx==0){
+            add_first(data);
+            return;
+        }
+        Node curr=head;
+        int count=0;
+        while(count<idx-1){
+            curr=curr.next;
+            count++;
+        }
+        Node newNode=new Node(data);
+        Node temp=curr.next;
+        curr.next=newNode;
+        newNode.next=temp;
+    }
+
+    public int size(){
+        Node curr=head;
+        int size=1;
+        while(curr.next!=null){
+            curr=curr.next;
+            size++;
+
+        }
+        return size;
+    }
+
+    public void remove_first(){
+        if(head==null){
+            System.out.println("LL Is Empty");
+            return;
+        }
+        head=head.next;
+    }
+
+    public void remove_last(){
+        if(head==null){
+            System.out.println("LL Is Empty");
+            return;
+        }
+        Node curr=head;
+        while(curr.next.next!=null){
+            curr=curr.next;
+        }
+        tail=curr;
+        tail.next=null;
+    }
+
+    public void remove(int idx){
+        if(head==null){
+            System.out.println("LL Is Empty");
+            return;
+        }
+        Node curr=head;
+        int temp=0;
+        while(temp<idx-1){
+            curr=curr.next;
+            temp++;
+        }
+        curr.next=curr.next.next;
+        
+    }
+
+    public int search(int target){
+        if(head==null){
+            System.out.println("LL Is Empty");
+            return -1;
+        }
+        Node curr=head;
+        int temp=0;
+        while(curr.next!=null){
+            if(curr.data==target){
+                return temp+1;
+            }
+            else{
+                curr=curr.next;
+                temp++;
+            }
+        }
+        return -1;
+    }
+
+
+        
 
 
     }
