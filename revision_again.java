@@ -170,60 +170,60 @@ public class revision_again{
 
     public static void main(String args[]){
 
-        // System.out.println("\nTest Case 5 - Prime Check (Prime Number):");
-        // System.out.println(check_prime(7));  
+        System.out.println("\nTest Case 5 - Prime Check (Prime Number):");
+        System.out.println(check_prime(7));  
 
-        // System.out.println("\nTest Case 6 - Prime Check (Non-prime Number):");
-        // System.out.println(check_prime(10));  
+        System.out.println("\nTest Case 6 - Prime Check (Non-prime Number):");
+        System.out.println(check_prime(10));  
 
-        // System.out.println("\nTest Case 7 - Factorial:");
-        // System.out.println(find_factorial(5));  
+        System.out.println("\nTest Case 7 - Factorial:");
+        System.out.println(find_factorial(5));  
 
-        // System.out.println("\nTest Case 8 - Palindrome Check (Palindrome String):");
-        // System.out.println(check_palindrom("madam"));  
+        System.out.println("\nTest Case 8 - Palindrome Check (Palindrome String):");
+        System.out.println(check_palindrom("madam"));  
 
-        // System.out.println("\nTest Case 9 - Palindrome Check (Non-palindrome String):");
-        // System.out.println(check_palindrom("hello"));  
+        System.out.println("\nTest Case 9 - Palindrome Check (Non-palindrome String):");
+        System.out.println(check_palindrom("hello"));  
 
-        // System.out.println("\nTest Case 10 - Matrix Transpose:");
-        // int[][] matrix = {
-        //     {1, 2, 3},
-        //     {4, 5, 6},
-        //     {7, 8, 9}
-        // };
-        // int[][] transposedMatrix = matrix_transpose(matrix);
-        // for (int i = 0; i < transposedMatrix.length; i++) {
-        //     for (int j = 0; j < transposedMatrix[i].length; j++) {
-        //         System.out.print(transposedMatrix[i][j] + " ");
-        //     }
-        //     System.out.println();
-        // }  
+        System.out.println("\nTest Case 10 - Matrix Transpose:");
+        int[][] matrix = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+        int[][] transposedMatrix = matrix_transpose(matrix);
+        for (int i = 0; i < transposedMatrix.length; i++) {
+            for (int j = 0; j < transposedMatrix[i].length; j++) {
+                System.out.print(transposedMatrix[i][j] + " ");
+            }
+            System.out.println();
+        }  
 
-        // System.out.println("\nTest Case 11 - Linear Search (Element Found):");
-        // int[] arr1 = {10, 20, 30, 40, 50};
-        // System.out.println(linear_search(arr1, 30));  
+        System.out.println("\nTest Case 11 - Linear Search (Element Found):");
+        int[] arr1 = {10, 20, 30, 40, 50};
+        System.out.println(linear_search(arr1, 30));  
 
-        // System.out.println("\nTest Case 12 - Linear Search (Element Not Found):");
-        // System.out.println(linear_search(arr1, 60));  
+        System.out.println("\nTest Case 12 - Linear Search (Element Not Found):");
+        System.out.println(linear_search(arr1, 60));  
 
-        // System.out.println("\nTest Case 13 - Binary Search (Element Found):");
-        // int[] arr2 = {10, 20, 30, 40, 50};
-        // System.out.println(binary_search(arr2, 30));  
+        System.out.println("\nTest Case 13 - Binary Search (Element Found):");
+        int[] arr2 = {10, 20, 30, 40, 50};
+        System.out.println(binary_search(arr2, 30));  
 
-        // System.out.println("\nTest Case 14 - Binary Search (Element Not Found):");
-        // System.out.println(binary_search(arr2, 60));  
+        System.out.println("\nTest Case 14 - Binary Search (Element Not Found):");
+        System.out.println(binary_search(arr2, 60));  
 
-        // System.out.println("\nTest Case 15 - Bubble Sort:");
-        // int[] arr3 = {5, 2, 9, 1, 5, 6};
-        // System.out.println(Arrays.toString(bubble_sort(arr3)));  
+        System.out.println("\nTest Case 15 - Bubble Sort:");
+        int[] arr3 = {5, 2, 9, 1, 5, 6};
+        System.out.println(Arrays.toString(bubble_sort(arr3)));  
 
-        // System.out.println("\nTest Case 16 - Insertion Sort:");
-        // int[] arr4 = {5, 2, 9, 1, 5, 6};
-        // System.out.println(Arrays.toString(insertion_sort(arr4))); 
+        System.out.println("\nTest Case 16 - Insertion Sort:");
+        int[] arr4 = {5, 2, 9, 1, 5, 6};
+        System.out.println(Arrays.toString(insertion_sort(arr4))); 
 
-        // System.out.println("\nTest Case 17 - Selection Sort:");
-        // int[] arr5 = {5, 2, 9, 1, 5, 6};
-        // System.out.println(Arrays.toString(selection_sort(arr5)));  
+        System.out.println("\nTest Case 17 - Selection Sort:");
+        int[] arr5 = {5, 2, 9, 1, 5, 6};
+        System.out.println(Arrays.toString(selection_sort(arr5)));  
         LinkedLis list = new LinkedLis();
 
       
