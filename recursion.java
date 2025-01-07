@@ -10,6 +10,8 @@
       Why ? : to solve complex and bigger problems , and alternate of iteration ... it shows vica verca relation with iteration.
      */
 
+import java.util.Arrays;
+
 public class recursion {
 
 
@@ -133,6 +135,85 @@ public class recursion {
         return linear_search(arr, target, index+1);
     }
 
+    public static int[] merge_short(int arr[]){
+        if(arr.length<=1){
+            return arr;
+        }
+        int mid=arr.length/2;
+        int left[]=merge_short(Arrays.copyOfRange(arr, 0,mid));
+        int right[]=merge_short(Arrays.copyOfRange(arr, mid, arr.length));
+        return merge(left,right);
+
+    }
+
+    public static int[] merge(int left[],int right[]){
+        int i=0,j=0,k=0;
+        int arr[]=new int[left.length+right.length];
+        while(i<left.length&&j<right.length){
+            if(left[i]<=right[j]){
+                arr[k]=left[i];
+                i=i+1;
+            }
+            else{
+                arr[k]=right[j];
+                j=j+1;
+            }
+            k=k+1;
+        }
+
+        while(i<left.length){
+            arr[k]=left[i];
+            i=i+1;
+            k=k+1;
+        }
+        while(j<right.length){
+            arr[k]=right[j];
+            j=j+1;
+            k=k+1;
+        }
+        return arr;
+    }
+
+    public static void quick_sort(int arr[],int low , int high){
+        if(low>=high){
+            return;
+        }
+        int s=low;
+        int e=high;
+        int mid=s+(e-s)/2;
+        int pivot=arr[mid];
+
+        while(s<=e){
+            while(arr[s]<=pivot){
+                s++;
+            }
+            while(arr[e]>pivot){
+                e--;
+            }
+            
+            if(s<=e){
+                int temp=arr[s];
+                arr[s]=arr[e];
+                arr[e]=temp;
+                s++;
+                e--;
+            }
+        }
+
+        quick_sort(arr, low, e);
+        quick_sort(arr, s, high);
+
+
+        /*
+         Basically , sabse pahle base lgao then start , end and mid initiate kro then tb tk loop chlao jb tk s aur e mil ni jata aur check kro
+         kii rules follow ho rhe hai yaa nhi , ab 2 cases hai agr rules follow ho gye to naya pivot bnao and repeat this process for other elements
+         otherwise jaha violacne hua waha interchange kro elements ko and then do same for next elements..
+         */
+
+        
+
+    }
+
 
 
 
@@ -147,8 +228,12 @@ public class recursion {
         // System.out.println(reverse(1342));
         // System.out.println(is_palindrone("4554", 0, 3));
         // System.out.println(count_steps(41));
-        int arr[]={1,2,3,4,5};
+        int arr[]={1,9,3,14,5};
         System.out.println(is_sorted(arr));
+        arr=merge_short(arr);
+        System.out.println(Arrays.toString(arr));
+        System.out.println(is_sorted(arr));
+
 
     }
 }
