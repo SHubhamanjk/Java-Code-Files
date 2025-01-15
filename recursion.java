@@ -215,6 +215,22 @@ public class recursion {
     }
 
 
+    public static void skip_char(String neww , String old , char target ){
+        if(old.length()==0){
+            System.out.println(neww);
+            return;
+        }
+
+        if(old.charAt(0)==target){
+            skip_char(neww, old.substring(1), target);
+        }
+        else{
+            skip_char(neww+old.charAt(0), old.substring(1), target);
+        }
+
+    }
+
+
 
 
 
@@ -228,11 +244,12 @@ public class recursion {
         // System.out.println(reverse(1342));
         // System.out.println(is_palindrone("4554", 0, 3));
         // System.out.println(count_steps(41));
-        int arr[]={1,9,3,14,5};
-        System.out.println(is_sorted(arr));
-        arr=merge_short(arr);
-        System.out.println(Arrays.toString(arr));
-        System.out.println(is_sorted(arr));
+        // int arr[]={1,9,3,14,5};
+        // System.out.println(is_sorted(arr));
+        // arr=merge_short(arr);
+        // System.out.println(Arrays.toString(arr));
+        // System.out.println(is_sorted(arr));
+        skip_char("", "shubham", 'h');
 
 
     }
